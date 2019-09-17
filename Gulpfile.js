@@ -7,7 +7,7 @@ var fs = require("fs");
 
 function scripts() {
   return browserify("./index.js")
-  .transform("babelify", {presets: ["@babel/preset-env"]})
+  .transform("babelify", {presets: ["@babel/preset-env"], plugins: ["@babel/plugin-proposal-class-properties"]})
   .bundle()
   .pipe(source("scripts.min.js"))
   .pipe(streamify(uglify()))

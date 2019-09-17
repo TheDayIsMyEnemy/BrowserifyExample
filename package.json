@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "browser": {
+    "jquery": "./jquery-3.4.1.min.js"
+  },
+  "browserify-shim": {
+    "jquery": "$"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim"
+    ]
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,12 +22,18 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
+    "browserify-shim": "^3.8.14",
     "gulp": "^4.0.2",
     "gulp-streamify": "^1.0.2",
     "gulp-uglify": "^3.0.2",
     "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "core-js": "^3.2.1",
+    "regenerator-runtime": "^0.13.3"
   }
 }

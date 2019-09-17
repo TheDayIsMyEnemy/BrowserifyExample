@@ -1,8 +1,10 @@
-const log = function(message) {
-    console.log(message);
-}
+const logger = require('./logger');
 
 module.exports = 
 {
-    log
+    log: function(message) {
+        $('body').append(message);
+        console.log(message);
+        logger.save(message);
+    }
 }
