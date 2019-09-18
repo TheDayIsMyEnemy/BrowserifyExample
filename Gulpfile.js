@@ -6,7 +6,7 @@ var source = require('vinyl-source-stream')
 var fs = require("fs");
 
 function scripts() {
-  return browserify("./index.js")
+  return browserify("./js/game.js")
   .transform("babelify", {presets: ["@babel/preset-env"], plugins: ["@babel/plugin-proposal-class-properties"]})
   .bundle()
   .pipe(source("scripts.min.js"))

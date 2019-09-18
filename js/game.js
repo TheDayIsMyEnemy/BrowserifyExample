@@ -14,9 +14,7 @@ class Game {
     }
 
     async start() {
-        if (jQuery){
-            alert('jquery is loaded');
-        }
+        console.log($);
         this.reset();
         await this.stop();
         writer.log('Starting...');
