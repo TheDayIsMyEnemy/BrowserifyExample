@@ -1,11 +1,11 @@
 require('core-js');
 const regeneratorRuntime = require("regenerator-runtime");
 const writer = require('./writer');
-var $ = require('jquery');
+global.$ = global.jQuery = require('jquery');
 
 class Game {
 
-    reset =  () => {
+    reset = () => {
         writer.log('Reset')
     }
 
@@ -21,6 +21,4 @@ class Game {
     }
 }
 global.Game = Game;
-module.exports = {
-    Game
-}
+module.exports = Game;
