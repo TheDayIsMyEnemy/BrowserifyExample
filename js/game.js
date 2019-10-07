@@ -1,7 +1,8 @@
-require('core-js');
+// require('core-js');
 const regeneratorRuntime = require("regenerator-runtime");
+// global.$ = global.jQuery = require('jquery');
+require('./sagepay');
 const writer = require('./writer');
-global.$ = global.jQuery = require('jquery');
 
 class Game {
 
